@@ -1,0 +1,45 @@
+<template>
+  <div id="app">
+    <Todos v-bind:todos="todos" />
+  </div>
+</template>
+
+<script>
+import Todos from "./components/Todos";
+
+export default {
+  name: "App",
+  components: {
+    Todos,
+  },
+  data() {
+    return {
+      todos: [
+        {
+          id: 1,
+          title: "Todo One",
+          completed: false,
+        },
+        {
+          id: 2,
+          title: "Todo Two",
+          completed: true,
+        },
+        {
+          id: 3,
+          title: "Todo Three",
+          completed: true,
+        },
+      ],
+    };
+  },
+};
+</script>
+
+<style>
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.1em;
+}
+</style>
